@@ -8,6 +8,10 @@ import {
   Inter_700Bold,
   useFonts,
 } from '@expo-google-fonts/inter';
+import ToastManager from 'toastify-react-native';
+import colors from 'tailwindcss/colors';
+import { Host } from 'react-native-portalize';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function Layout() {
   const [fontIsLoaded] = useFonts({
@@ -22,8 +26,22 @@ export default function Layout() {
   }
 
   return (
-    <SafeAreaView className="flex-1 bg-slate-900">
-      <Slot />
-    </SafeAreaView>
+    <GestureHandlerRootView className="flex-1">
+      <SafeAreaView className="flex-1 bg-slate-900">
+        <Host>
+          <ToastManager
+            hasBackdrop
+            height={90}
+            width={300}
+            animationStyle="rightInOut"
+            textStyle={{
+              color: colors.slate[900],
+              textAlign: 'center',
+            }}
+          />
+          <Slot />
+        </Host>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 }
