@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import { Text, Pressable, PressableProps } from 'react-native';
 
-type CategoryProps = PressableProps & {
+type CategoryProps = PressableProps &{
   title: string;
   isSelected?: boolean;
 };
