@@ -42,3 +42,6 @@ expo-env.d.ts
 #lock files
 yarn.lock
 package-lock.json
+
+#vscode
+.vscode
