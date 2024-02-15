@@ -14,7 +14,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { Modalize } from 'react-native-modalize';
 import { Toast } from 'toastify-react-native';
 
-const PHONE_NUMBER = '+5587981492999';
+const PHONE_NUMBER = 'your-phone-goes-here';
 
 export default function Cart() {
   const [selectedProduct, setSelectedProduct] = useState<ProductCartProps>();
